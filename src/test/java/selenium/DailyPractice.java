@@ -46,8 +46,8 @@ public class DailyPractice {
         // Fluent wait
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofSeconds(1));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+                .pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class);
+        WebElement firstResult1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 
         // dropdown
         WebElement staticDropdown = driver.findElement(By.id("#id"));
@@ -57,6 +57,7 @@ public class DailyPractice {
         // Actions class
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
+        actions.sendKeys(Keys.CONTROL).click();
 
         // Alert
         driver.switchTo().alert().accept();

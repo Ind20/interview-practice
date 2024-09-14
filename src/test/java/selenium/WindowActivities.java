@@ -16,6 +16,7 @@ public class WindowActivities {
         driver.navigate().back();
         Thread.sleep(2000);
         driver.navigate().forward();
+        driver.navigate().refresh();
     }
 
 }
