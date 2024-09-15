@@ -1,3 +1,5 @@
+package problems;
+
 public class ReverseSentense {
     public static void main(String[] args) {
         String input = "where was the man";

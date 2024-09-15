@@ -1,6 +1,6 @@
 package core;
 
-public class Test {
+public class ReverseStr {
     public static void main(String[] args) {
         String str = "My name is indresh maurya";
         // output = ym eman si sherdni ayryam

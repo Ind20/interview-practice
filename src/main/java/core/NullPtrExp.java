@@ -8,7 +8,6 @@ public class NullPtrExp {
             System.out.println("Length of text: " + length);
         } catch (Exception e) {
             System.out.println("exception found");
-
         }
     }
 
