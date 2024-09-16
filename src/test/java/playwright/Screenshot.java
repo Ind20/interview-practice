@@ -16,15 +16,7 @@ public class Screenshot {
         page.navigate("https://www.google.co.in/");
         System.out.println("Navigated to "+page.title());
 
-        try {
-
-            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("screenshot.png")).setTimeout(100));
-
-        }catch(Exception e){
-
-            e.printStackTrace();
-        }
-
+        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("screenshots\\screenshot.png")).setTimeout(100));
 
     }
 }
