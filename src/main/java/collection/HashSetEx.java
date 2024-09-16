@@ -1,22 +1,20 @@
 package collection;
 
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class HashSetEx {
-    public static void main(String[] args) {
-        HashSet<Integer> evenNumber = new HashSet<>();
 
-        // Using add() method
-        evenNumber.add(2);
-        evenNumber.add(4);
-        evenNumber.add(6);
-        evenNumber.add(6);
-        System.out.println("HashSet: " + evenNumber);
+    public static void main(String[] args){
+        Set<String> set = new HashSet<>();
+        set.add("abc");
+        set.add("jkl");
+        set.add("xyz");
 
-        HashSet<Integer> numbers = new HashSet<>();
-
-        // Using addAll() method
-        numbers.addAll(evenNumber);
-        numbers.add(5);
-        System.out.println("New HashSet: " + numbers);
+        Iterator<String> it = set.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
     }
 }
