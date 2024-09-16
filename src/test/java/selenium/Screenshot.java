@@ -17,7 +17,7 @@ public class Screenshot {
         driver.get("https://www.google.com");
 
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "C:\\Users\\Asus\\javaprojects\\seleniumtest\\screenshots\\screenshot.png";
+        String screenshotPath = "screenshots\\screenshot.png";
         try {
             FileUtils.copyFile(srcFile, new File(screenshotPath));
             System.out.println("Screenshot saved to: " + screenshotPath);
