@@ -1,40 +1,46 @@
 package selenium;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
-import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Google {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.manage().window().maximize();
+    static WebDriver driver = new ChromeDriver();
+    public static void searchAndPrintPageTitle(String name) throws InterruptedException {
 
-        List<WebElement> links = driver.findElements(By.xpath("//a"));
 
-        for(WebElement e: links){
-            System.out.println(e.getText());
-        }
+        WebElement search = driver.findElement(By.name("q"));
+        search.clear();
+        search.sendKeys(name);
+        search.sendKeys(Keys.ENTER);
 
-        driver.findElement(By.xpath("//textarea[@name='q']")).sendKeys("Indresh");
+        WebElement link = driver.findElement(By.xpath("(//h3[@class='LC20lb MBeuO DKV0Md' and contains(text(), '"+name+"')])[1]"));
+        Actions act = new Actions(driver);
+        act.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).perform();
 
-        driver.findElement(By.xpath("(//input[@value='Google Search'])[2]")).click();
-
-        ((JavascriptExecutor) driver).executeScript("return document.readyState");
-
-        List<WebElement> searchLinks = driver.findElements(By.xpath("//a/h3[contains(text(),'Indresh')]"));
-        System.out.println("Print "+searchLinks.size()+" links with name: ");
-        for(WebElement el:searchLinks){
-            System.out.println(el.getText());
-        }
-
-        driver.quit();
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(3000);
+        System.out.println("Page title is :"+driver.getTitle());
+        driver.close();
+        driver.switchTo().window(tabs.get(0));
 
     }
+
+    public static void main(String[] args) throws InterruptedException {
+        driver.get("https://www.google.co.in/");
+
+        searchAndPrintPageTitle("Indresh");
+        //searchAndPrintPageTitle("Kumar");
+        //searchAndPrintPageTitle("Ram");
+
+        driver.quit();
+    }
+
 }

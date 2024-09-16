@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .btn{
+        background-color: red;
+        }
+        .btn:hover{
+        background-color: green;
+        }
+
+    </style>
+</head>
+<body onload="showAlert()">
+
+<h2>HTML Forms</h2>
+
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<button class="btn">Click me</button>
+<script>
+    function showAlert() {
+      alert ("Hello world!");
+    }
+</script>
+</body>
+</html>
