@@ -18,5 +18,9 @@ public class Screenshot {
 
         page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("screenshots\\screenshot.png")).setTimeout(100));
 
+        page.close();
+        context.close();
+        browser.close();
+        playwright.close();
     }
 }
