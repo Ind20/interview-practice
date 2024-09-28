@@ -2,7 +2,7 @@ package problems;
 
 import java.util.*;
 
-public class javaArrayList {
+public class JavaArrayList {
     public static void main(String[] args) {
         //List is a resizable array
         List<String> list = new ArrayList<>();

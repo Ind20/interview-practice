@@ -12,6 +12,8 @@ public class HashMapEx {
         capitalCities.put("Norway", "Oslo");
         capitalCities.put("USA", "Washington DC");
 
+
+
         for (String i : capitalCities.keySet()) {
             System.out.println(i + " - " + capitalCities.get(i));
         }
