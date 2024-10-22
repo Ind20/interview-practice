@@ -1,4 +1,6 @@
-package javapractice;
+package core;
+
+import core.TestInterface;
 
 class SBI implements TestInterface {
     public int rateOfInterest()

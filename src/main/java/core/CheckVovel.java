@@ -1,4 +1,4 @@
-package javapractice;
+package core;
 public class CheckVovel {
         public static void main(String[] args) {
             String testString = "bcd";

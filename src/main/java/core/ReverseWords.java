@@ -1,9 +1,9 @@
 package core;
 
-public class ReverseStr {
+public class ReverseWords {
     public static void main(String[] args) {
         String str = "My name is indresh maurya";
-        // output = ym eman si sherdni ayryam
+        // output = yM eman si sherdni ayryam
         String reverced = "";
         String[] words = str.split(" ");
 

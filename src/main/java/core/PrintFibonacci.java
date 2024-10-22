@@ -1,4 +1,4 @@
-package javapractice;
+package core;
 
 public class PrintFibonacci {
     public static void printFibonacci(int number){

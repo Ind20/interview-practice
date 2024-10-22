@@ -1,4 +1,6 @@
-package javapractice;
+package core;
+
+import core.BankAccount;
 
 public class Encapsulation {
     public static void main(String[] args) {

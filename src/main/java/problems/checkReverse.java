@@ -1,6 +1,6 @@
 package problems;
 
-
+//print reverse word if exists
 public class checkReverse {
     public static void main(String[] args) {
         String[] str = {"pot", "cat", "moon", "sun", "noom", "top"};

@@ -1,4 +1,4 @@
-package javapractice;
+package core;
 
 public class PrimeNumber {
     public static boolean isPrime(int n){

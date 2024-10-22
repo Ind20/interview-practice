@@ -1,4 +1,4 @@
-package javapractice;
+package core;
 
 public class BankAccount {
     private final String accountHolder = "javapractice.Test User";

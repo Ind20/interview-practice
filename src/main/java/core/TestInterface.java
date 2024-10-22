@@ -1,5 +1,5 @@
-package javapractice;
+package core;
 
-interface TestInterface{
+public interface TestInterface{
     int rateOfInterest();
 }
