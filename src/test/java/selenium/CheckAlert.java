@@ -12,7 +12,7 @@ public class CheckAlert {
         driver.manage().window().maximize();
         driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert");
         driver.switchTo().frame("iframeResult");
-        WebElement ele = driver.findElement(By.xpath("//*[text()='Try it']"));
+        WebElement ele = driver.findElement(By.xpath("//button[text()='Try it']"));
         ele.click();
         Assert.assertEquals(isAlertPresent(), true, "Alert is not present");
         driver.quit();
