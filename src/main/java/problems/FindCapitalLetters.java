@@ -6,13 +6,13 @@ import java.util.List;
 public class FindCapitalLetters {
     public static void main(String[] args) {
         String str = "AbcFkdGsdTdfdR";
+        String output = "";
         char[] arr = str.toCharArray();
-        List<Character> list = new ArrayList<>();
         for(char c : arr){
             if(c<96){
-                list.add(c);
+                output+= c;
             }
         }
-        System.out.println(list);
+        System.out.println(output);
     }
 }
