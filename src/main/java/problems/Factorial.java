@@ -1,7 +1,5 @@
 package problems;
 
-import static java.lang.System.exit;
-
 public class Factorial {
     public static int factorial(int n){
         int fact;
@@ -18,7 +16,7 @@ public class Factorial {
         return fact;
     }
     public static void main(String[] args) {
-        System.out.println(factorial(-9));
+        System.out.println(factorial(10));
 
     }
 }

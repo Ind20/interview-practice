@@ -5,7 +5,7 @@ public class Alphabets {
         char ch;
         for (ch = 'a'; ch <= 'z'; ch++)
         {
-            System.out.print(" " +ch);
+            System.out.print(ch+" ");
         }
     }
 }

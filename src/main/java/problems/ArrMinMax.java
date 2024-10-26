@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 class ArrMinMax {
     public static void main(String[] args) {
-        int[] arr = {10, 5, 30, 20, 50};
+        int[] arr = {10, 5, 30, 20, 20, 50, 50};
         Arrays.sort(arr);
 //        int max = arr[0];
 //        int min = arr[0];
