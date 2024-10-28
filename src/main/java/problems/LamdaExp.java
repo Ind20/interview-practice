@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+interface Test {
+    List<Integer> uniqueList();
+}
+
 public class LamdaExp {
-    public interface Test{
-        List<Integer> uniqueList();
-    }
+
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,4,6,8,3,56,4,4);
         Test exp = () -> {

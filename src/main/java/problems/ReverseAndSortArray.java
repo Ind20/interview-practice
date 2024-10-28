@@ -1,11 +1,11 @@
 package problems;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class ReverseAndSortArray {
     public static void main(String[] args) {
-
 
         int[] a ={10,20,21,20,22,50,101,999,1,99,21,10,97,11,1001,111};
 
@@ -19,7 +19,8 @@ public class ReverseAndSortArray {
 
         Collections.sort(list);
 
-        System.out.println(list);
+        Object[] arr = list.toArray();
+        System.out.println(Arrays.toString(arr));
 
     }
 
