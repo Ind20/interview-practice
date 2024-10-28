@@ -11,7 +11,7 @@ public class PrimeNumbers {
         if (n < 1) {
             System.out.println("invalid number!");
         } else if (n == 1) {
-            System.out.println("2");
+            System.out.println(2);
         } else {
             System.out.println("First " + n + " prime numbers are :");
             int count = 0;
